@@ -12,7 +12,7 @@
         <div class="wizard-progress-bar"
              :style="progressBarStyle"></div>
       </div>
-      <ul class="wizard-nav wizard-nav-pills" role="tablist" :class="stepsClasses">
+      <ol class="wizard-nav wizard-nav-pills" role="tablist" :class="stepsClasses">
         <slot name="step" v-for="(tab, index) in tabs"
               :tab="tab"
               :index="index"
@@ -27,7 +27,7 @@
                        :index="index">
           </wizard-step>
         </slot>
-      </ul>
+      </ol>
       <div class="wizard-tab-content">
         <slot v-bind="slotProps">
         </slot>
